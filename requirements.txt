@@ -1,0 +1,8 @@
+Django==1.6.8
+argparse==1.2.1
+django-mongodb-engine==0.5.2
+djangotoolbox==1.6.2
+ipython==2.4.0
+pymongo==2.8
+requests==2.5.1
+wsgiref==0.1.2
