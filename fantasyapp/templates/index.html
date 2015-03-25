@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+{% load staticfiles %}
+{% load cust_filters %}
+{% block content %}
+<div class="container">
+	<div class="col-lg-6">
+		<ul>
+			{% for fixture in fixtures %}
+			<li>
+				<span>{{ fixture.home }} vs {{ fixture.away }}</span>
+			</li>
+			<ul>
+				<h5>{{ fixture.home }}</h5>
+				{% for x in data %}
+			    	{% if x.fpl_data.team_name == fixture.home|trim %}
+			    		<h5>Defenders</h5>
+			    		{% if x.fpl_data.type_name|trim == 'Defender' %}
+					       <li> {{ x.fpl_data.web_name }} </li>
+					    {% endif %}
+				    {% endif %}
+			    {% endfor %}
+			</ul>
+			{% endfor %}
+		</ul>
+	</div>
+	<div class="col-lg-6">
+		
+	</div>
+</div>
+
+{% endblock %}
