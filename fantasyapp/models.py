@@ -181,7 +181,7 @@ def populate_mongo():
 	client = MongoClient()
 	db = client.fpl
 	db.drop_collection('fantasyapp_data')
-	NO_OF_PLAYERS = 678
+	NO_OF_PLAYERS = 538
 
 	for i in range(1,NO_OF_PLAYERS+1):
 		url = os.path.join("http://fantasy.premierleague.com/web/api/elements/", str(i))
